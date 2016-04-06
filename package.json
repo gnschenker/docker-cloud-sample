@@ -6,14 +6,15 @@
   "author": "Gabriel Schenker",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "jasmine-node": "^1.14.5",
     "request": "^2.70.0"
   },
   "scripts": {
-    "test": "jasmine-node spec",
+    "test": "jasmine-node --autotest --color spec",
     "start": "node server.js"
   }
 }
