@@ -1,4 +1,5 @@
 FROM node
+RUN npm install jasmine-node -g
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
@@ -8,6 +9,6 @@ RUN npm install
 
 COPY . /usr/src/app
 
-EXPOSE 1337 
+EXPOSE 3000 
 
 ENTRYPOINT ["npm", "start"]
