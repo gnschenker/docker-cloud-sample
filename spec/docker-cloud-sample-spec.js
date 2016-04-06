@@ -1,6 +1,6 @@
 var request = require("request");
 var app = require("../server.js")
-var base_url = "http://localhost:3000/"
+var base_url = "http://localhost/"
 describe("Hello World Test", function(){
   describe("GET /", function() {
 
@@ -13,7 +13,7 @@ describe("Hello World Test", function(){
     
     it("Greets me", function(done){
       request.get(base_url, function(error, response, body) {
-        expect(response.body).toBe("Express JS says \"Hello unknown\"!");
+        expect(response.body.indexOf('Express JS says')).not.toBe(-1);
         done();
       });
     });
