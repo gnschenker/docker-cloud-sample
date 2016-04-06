@@ -1,11 +1,16 @@
 var express = require('express');
 var app = express();
 var _ = require('underscore');
-var port = process.env.PORT || 3000;
+var port = 80;  //process.env.PORT || 3000;
 
 app.get('/', function (req, res) {
-  var name = process.env.MY_NAME || 'unknown';
-  res.send('Express JS says "Hello ' + name + '"!');
+  var name = process.env.NAME || 'You';
+  var host = process.env.HOSTNAME;
+  var body = 
+    '<h1>Express JS says</h1> \
+     <p>Hello ' + name + '!</p> \
+     <p>Hostname: '+host;
+  res.send(body);
 });
 
 var projects = [
