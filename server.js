@@ -7,6 +7,14 @@ app.get('/', function (req, res) {
   res.send('Express JS says "Hello ' + name + '"!');
 });
 
+app.get('/projects', function(req, res){
+  var projects = [
+    {"id":1, "name":"One"},
+    {"id":2, "name":"Two"}
+  ];
+  res.send(projects);
+});
+
 var server = app.listen(port, function(){
   console.log("Express server listening on port %d in %s mode", port, app.settings.env);
 });
